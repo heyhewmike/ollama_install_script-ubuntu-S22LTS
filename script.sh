@@ -4,7 +4,7 @@
 clear
 echo "This script needs to be run as a normal user with sudo permissions"
 sleep 1
-su - -c 'apt update && apt upgrade -y'
+apt update && apt upgrade -y
 curl -fsSL https://ollama.com/install.sh | sh
 echo "Getting llama3 8 Billion"
 sleep 1

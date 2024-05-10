@@ -4,11 +4,11 @@
 clear
 echo "This script needs to be run as a normal user with sudo permissions"
 sleep 1
-su - -c 'apt update && apt upgrade -y'
+apt update && apt upgrade -y
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
-su - -c 'dpkg -i cuda keyring_1.1-1_all.deb'
-su - -c 'apt update && apt install -y cuda-toolkit-12-4'
-su - -c 'apt install -y cuda-drivers'
+dpkg -i cuda keyring_1.1-1_all.deb
+apt update && apt install -y cuda-toolkit-12-4
+apt install -y cuda-drivers
 curl -fsSL https://ollama.com/install.sh | sh
 echo "Getting llama3 8 Billion"
 sleep 1
