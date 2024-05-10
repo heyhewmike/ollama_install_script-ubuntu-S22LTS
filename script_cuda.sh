@@ -11,6 +11,8 @@ dpkg -i cuda-keyring_1.1-1_all.deb
 apt update && apt install -y cuda-toolkit-12-4 cuda-drivers
 # apt install -y cuda-drivers
 curl -fsSL https://ollama.com/install.sh | sh
+echo "Starting ollama server"
+ollama serve
 echo "Getting llama3 8 Billion"
 # sleep 1
 ollama pull llama3
